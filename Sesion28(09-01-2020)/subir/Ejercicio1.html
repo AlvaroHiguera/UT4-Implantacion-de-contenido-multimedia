@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    <html lang="es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sesion 28 - Elementos multimedia</title>
+</head>
+
+<h1>Ejercicio 1 Sesion 28 - Elementos multimedia.</h1>
+
+<body>
+    <div>
+        <picture>
+            <source media="(min-width: 640px)" class="imagen1" srcset="img/ornn-1-1014093.jpg"
+                alt="Ornn en la grieta del himbocador" title="Ornn en la grieta del himbocador"><br>
+            <img src="img/malphite-trebol.jpg" alt="malphite-trebol" title="malphite-trebol"><br>
+        </picture>
+
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licencia Creative Commons"
+                style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+        <br />
+
+    </div>
+
+    <audio id="audio1" controls>
+        <source src="audio/Phoenix (ft. Cailin Russo and Chrissy Costanza)  Worlds 2019 - League of Legends.mp3"
+            type="audio/mpeg">
+        <source src="audio/Phoenix (ft. Cailin Russo and Chrissy Costanza)  Worlds 2019 - League of Legends.ogg"
+            type="audio/ogg">
+        <source src="audio/Phoenix (ft. Cailin Russo and Chrissy Costanza)  Worlds 2019 - League of Legends.wav"
+            type="audio/wav">
+    </audio>
+    <div>
+        <button onclick="document.getElementById('audio1').play()">Reproducir el Audio</button> 
+        <button onclick="document.getElementById('audio1').pause()">Pausar el Audio</button>
+        <button onclick="document.getElementById('audio1').volume+=0.1">Aumentar el Volumen</button>
+        <button onclick="document.getElementById('audio1').volume-=0.1">Disminuir el Volumen</button> 
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
