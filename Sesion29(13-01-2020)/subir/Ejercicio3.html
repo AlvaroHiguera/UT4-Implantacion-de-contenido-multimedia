@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 3 - Sesion 29</title>
+    <link rel="stylesheet" href="css/Ejercicio3.css">
+    <script>
+        function comprobarAlmacenamientoLocal() {
+
+            if (typeof (Storage) !== "undefined") {
+                window.alert("El navegador soporta almacenamiento local");
+            } else {
+                window.alert("El navegador no soporta almacenamiento local");
+            }
+        }
+        function almacenamientoYObtencionDatos() {
+            // Primero comprobamos la compatibilidad del navegador 
+            if (typeof (Storage) !== "undefined") {
+                //Almacenamos 
+                localStorage.setItem("equipo", "Deportivo");
+                //Obtenemos los datos 
+                document.getElementById("elementoAlmacen").innerHTML = localStorage.getItem("equipo");
+            } else {
+                document.getElementById("elementoAlmacen").innerHTML = "El navegador no es compatible con almacenamiento local";
+            }
+
+        }
+        function cuantosClicks() {
+            if (typeof (Storage) !== "undefined") {
+                if (sessionStorage.cuentadeclicks) {
+                    //Si existe el contador, lo incrementamos en 1 
+                    sessionStorage.cuentadeclicks = Number(sessionStorage.cuentadeclicks) + 1;
+                    //Realizamos conversión a número para evitar problemas. Los datos siempre se almacenan como cadena y requieren conversión. 
+                } else {
+                    // Si no existe el contador, lo creamos
+                    sessionStorage.cuentadeclicks = 1;
+                }
+                document.getElementById("elementoAlmacen").innerHTML = "Has hecho clic en el botón: " + sessionStorage.cuentadeclicks + " veces en esta sesión.";
+            } else {
+                document.getElementById("elementoAlmacen").innerHTML = "El navegador no soporta almacenamiento local";
+            }
+        }
+
+    </script>
+
+
+
+
+
+
+</head>
+
+<body>
+    <h1>Ejercicio 3 - Sesion 29.</h1>
+    <button onclick="comprobarAlmacenamientoLocal()">Comprobar Almacenamiento Local.</button>
+    <button onclick="almacenamientoYObtencionDatos()">Almacenamiento Local y Obtencion.</button>
+    <button onclick="cuantosClicks()">Contar los clicks.</button>
+
+    <div class="elementoAlmacen" id="elementoAlmacen">
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
