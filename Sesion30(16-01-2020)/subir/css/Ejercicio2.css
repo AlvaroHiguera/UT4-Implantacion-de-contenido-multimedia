@@ -1,0 +1,68 @@
+.contenedorgridalingcontent, .contenedorgridjustifyspacearound, .contenedorgridjustifycenter, .contenedorgridjustifyend, .contenedorgridtemplaterows, .contenedorgridtemplatecolumns, .contenedorgridlinea, .contenedorgrid {
+  grid-template-columns: auto auto auto;
+  background-color: #2196f3;
+  padding: 10px;
+  row-gap: 40px;
+  column-gap: 40px;
+}
+
+.contenedorgridalingcontent__elementohijo, .contenedorgridjustifyspacearound__elementohijo, .contenedorgridjustifycenter__elementohijo, .contenedorgridjustifyend__elementohijo, .contenedorgridtemplaterows__elementohijo, .contenedorgridtemplatecolumns__elementohijo, .contenedorgridlinea__elementohijo, .contenedorgrid__elementohijo2, .contenedorgrid__elementohijo10, .contenedorgrid__elementohijo {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid black;
+  box-sizing: border-box;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.contenedorgrid {
+  display: grid;
+}
+.contenedorgrid__elementohijo10 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.contenedorgrid__elementohijo2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.contenedorgridlinea {
+  display: inline-grid;
+}
+.contenedorgridtemplatecolumns {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  column-gap: 0;
+  row-gap: 0;
+}
+.contenedorgridtemplaterows {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  column-gap: 0;
+  row-gap: 0;
+  grid-template-rows: 200px 300px 200px;
+}
+.contenedorgridjustifyend {
+  display: grid;
+  justify-content: end;
+}
+.contenedorgridjustifycenter {
+  display: grid;
+  justify-content: center;
+}
+.contenedorgridjustifyspacearound {
+  display: grid;
+  justify-content: space-around;
+}
+.contenedorgridalingcontent {
+  display: grid;
+  margin-top: 30px;
+  min-height: 600px;
+  justify-content: center;
+  align-content: center;
+}
+
+/*# sourceMappingURL=ejercicio2.css.map */

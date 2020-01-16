@@ -1,0 +1,125 @@
+%contenedor {
+  grid-template-columns: auto auto auto;
+  background-color: #2196f3;
+  padding: 10px;
+  row-gap: 40px;
+  column-gap: 40px;
+}
+
+%hijo {
+  background-color: rgb(255, 255, 255, 0.8);
+  border: 1px solid rgb(0, 0, 0);
+  box-sizing: border-box;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.contenedorgrid {
+  display: grid;
+  @extend %contenedor;
+  &__elementohijo {
+    @extend %hijo;
+  }
+  &__elementohijo10 {
+    @extend %hijo;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  &__elementohijo2 {
+    @extend %hijo;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
+
+.contenedorgridlinea {
+  display: inline-grid;
+  @extend %contenedor;
+  &__elementohijo {
+    @extend %hijo;
+  }
+}
+.contenedorgridtemplatecolumns {
+  display: grid;
+  @extend %contenedor;
+  //   grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: repeat(5, 20%);
+  column-gap: 0;
+  row-gap: 0;
+  &__elementohijo {
+    @extend %hijo;
+  }
+}
+.contenedorgridtemplaterows {
+  display: grid;
+  @extend %contenedor;
+  //   grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: repeat(4, 25%);
+  column-gap: 0;
+  row-gap: 0;
+  grid-template-rows: 200px 300px 200px;
+  &__elementohijo {
+    @extend %hijo;
+  }
+}
+
+@mixin justifycontent($valor) {
+    justify-content: $valor;
+}
+
+.contenedorgridjustifyend {
+  display: grid;
+  @extend %contenedor;
+  @include justifycontent(end);
+  &__elementohijo {
+    @extend %hijo;
+  }
+}
+.contenedorgridjustifycenter {
+  display: grid;
+  @extend %contenedor;
+  @include justifycontent(center);
+  &__elementohijo {
+    @extend %hijo;
+  }
+}
+.contenedorgridjustifyspacearound {
+  display: grid;
+  @extend %contenedor;
+  @include justifycontent(space-around);
+  &__elementohijo {
+    @extend %hijo;
+  }
+}
+@mixin alingcontent($valor) {
+    align-content: $valor;
+}
+.contenedorgridalingcontent {
+  display: grid;
+  @extend %contenedor;
+
+  margin-top: 30px;
+  min-height: 600px;
+  @include justifycontent(center);
+  @include alingcontent(center);
+  &__elementohijo {
+    @extend %hijo;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
